@@ -22,7 +22,7 @@ As a user of the application I should be able to:
 
 ###### Home page
  
-<img src="https://raw.githubusercontent.com/amtesire/Project-Awards/master/media/images/homepage2.png">
+ 
  
  ###### Rating of a post
  <img src="https://raw.githubusercontent.com/amtesire/Project-Awards/master/media/images/Rating a vote.png"> 
