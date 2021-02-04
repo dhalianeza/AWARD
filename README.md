@@ -42,8 +42,7 @@ As a user of the application I should be able to:
 To get the project .......  
   
 ##### Cloning the repository:  
- ```bash 
-https://github.com/amtesire/Project-Awards.git 
+ 
 ```
 ##### Navigate into the folder and install requirements  
  ```bash 
