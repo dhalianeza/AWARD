@@ -25,8 +25,7 @@ As a user of the application I should be able to:
  
  
  ###### Rating of a post
- <img src="https://raw.githubusercontent.com/amtesire/Project-Awards/master/media/images/Rating a vote.png"> 
-
+  
  ###### Profile Page
  <img src="https://raw.githubusercontent.com/amtesire/Project-Awards/master/media/images/profile page.png">
 
