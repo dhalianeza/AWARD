@@ -1,0 +1,33 @@
+{% load bootstrap3 %}
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+
+  {% if title %}
+  <title>Award - {{title}}</title>
+  {% else %}
+    <title> Award </title>
+  {% endif %}
+
+  {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/basenews.css' %}">
+  {% endblock %}
+
+</head>
+<body>
+    {% include "navbar.html" %}
+
+    {% block content %} 
+    {%endblock%}
+
+    {% block scripts %}
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     {% bootstrap_javascript %}
+    {% endblock %}
+</body>
+</html>

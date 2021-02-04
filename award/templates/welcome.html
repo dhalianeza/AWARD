@@ -1,0 +1,78 @@
+{%extends 'base.html'%}
+{% load bootstrap3%}
+{% block content %} 
+{% load static %}
+{{ block.super}}
+<style>
+h1
+{
+  color: rgb(180, 69, 214);
+}
+#new{
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://png.pngtree.com/thumb_back/fw800/back_our/20190619/ourmid/pngtree-award-ceremony-poster-background-material-image_132683.jpg');
+
+  /* width:100%; */
+  /* background-repeat: no-repeat; */
+  background-size: cover; 
+}
+</style>
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <style>
+
+  </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div id="new" class="container-fluid" id="overlay"><br><br><br><br><br><br><br target="_blank">
+<h1 class="text-center" class="jumbotron" style="font-family: 'Lucida Sans', 'Lucida Sans Regular'; font-size: 50px;"> <br><br><span><a class='btn btn-default' style='font-size:17px; background-color: #49c5b6;' href="#own">visit site</a></span></h1><br><br><br><br>
+<br><br><br><br><br>
+
+</div>
+<br>
+
+<div class="container" id="own">
+ <div class="row">
+  {% for news_item in projects %}
+
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+       <div class="thumbnail" >
+        {% if news_item.photo %}
+        <p class="card-body "><img src="{{news_item.photo.url}}"  class="img-responsive" ></p>   
+        {% endif %}
+        <h2 class="text-center"> {{ news_item.title }} </h2>
+      <p class="text-center"> {{ news_item.description|truncatechars:70}} </p>
+      
+    
+      <a target="_blank" href="{{news_item.link}}" class="text-center">Visit The Site</a>
+      <hr>
+      {% for com in news_item.comment_set.all %}
+      <p>{{com.comment}}</p>
+      {% empty %}
+      {% endfor %}
+
+     
+  <a href="{% url 'comment' news_item.id %}">Write a Review</a>
+  <br>
+
+  <br>
+  <a href="{% url 'project' news_item.id %}" class="btn btn-grey btn-md">Review && Rate </a>
+
+
+
+</div>
+    </div>
+
+  
+
+  {% endfor %}
+</div>
+</div>
+
+{% endblock %}
+
+
+
+

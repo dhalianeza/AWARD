@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load bootstrap3 %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="container" style="margin-top:7%;">
+    <img src="{{ user.profile.profile_picture.url }}" class="img_profile">
+    <p class="text-center"><strong>username: {{user.username}}</strong></p>
+    <p class="text-center"><strong>email: {{user.email}}</strong></p>
+    <p class="text-center"><strong>Bio: {{user.profile.bio}}</strong></p>
+    <button class="btn btn-outline-primary" style="margin-left:30px;"><a href="{% url 'profile_edit' %}" >Edit Profile</a></button><i class="fa fa-sun-o" style="font-size: 28px;"></i>
+  
+    <hr>
+<br>
+<h5 class="text-center" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">All available projects</h5><br>
+    <div class="row">
+      {% for user in pi_images %}
+      <div class="col-md-4" style="margin-right: 5%;">
+        <img src="{{user.photo.url}}" class="img-responsive">
+        <h2 class="text-center"> {{ user.title }} </h2>
+        <p class="text-center"> {{ user.description|truncatechars:70}} </p>
+                <a target="_blank" href="{{user.link}}" class="text-center">Visit The Site</a>
+                <br><br>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+   </div>
+</div>
+
+
+
+
+  <style>
+      .img_profile{
+        vertical-align: middle;
+        width: 200px;
+        height: 200px;
+        border-radius:50%;
+      }
+      .mine,.init{
+       display: flex;
+       justify-content: space-between;
+      }
+    </style>
+  {% endblock %}
+                
+                      
+              

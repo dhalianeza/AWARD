@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #f5f4f8;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #7f87b4;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body class="container" style="background-color: #f4f7f6;">
+  
+    
+<div id="mySidenav" class="sidenav" >
+{% if user.is_authenticated %}
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="{%url 'welcome'%}">Home</a>
+  <a href="{%url 'new-post'%}">submit your site</a>
+  <a href="{%url 'profile'%}">Profile</a>
+  <a href="{%url 'profile_list'%}">Api Profile</a>
+  <a href="{%url 'project_list'%}">Api Project</a>
+  <a href="/accounts/password/change">Change Password</a>
+  <a href="/logout">Logout</a>
+  {% else %}
+  <a class='btn btn-default' href="/accounts/login">Login</a>
+  <a class='btn btn-default' href="/accounts/register">Register</a>
+  {% endif %}
+  
+</div>
+
+
+      <div class="col-sm-4 col-md-4 navbar-right">
+
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Projects" name="project" style="background-color: #f4f7f6;">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+        <button class="button button-large" style="position: relative;
+        display: inline-block;
+        height: 60px;
+        padding: 0 35px;
+        background-color: #49c5b6;
+        color: #fff;
+        line-height: 63px;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        border: none;
+        overflow: hidden;"><a href="{%url 'new-post'%}">SUBMIT YOUR SITE!</a></button>
+<hr>  
+<h1 class="text-center" style="font-size:30px;color:#111; ">awwardz</h1>
+</body>
+</html> 
+
+
+
+      <!-- Adding a search form  -->
+
+      <!-- search form end -->

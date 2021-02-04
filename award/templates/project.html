@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{%load static%} 
+{% load static%}
+{% block content %}
+<div class="container-fluid">
+
+  <div class="row">
+     <img src="{{project.photo.url}}"  class="img-responsive" >
+  <br>
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-8">
+   <div class="thumbnail">
+     <h4 class="card-title"><strong>{{project.title}}</strong></h4>  
+     <a href="{{project.link}}" class="font-weight-bold indigo-text py-2">Visit The Site</a>
+     <p class="card-text">{{project.description}}</p>
+     <div class="row">
+       <div class="col-md-4">Design: <span >{{project.design}}</span></div>
+       <div class="col-md-4">Usability: <span>{{project.usability}}</span></div>
+       <div class="col-md-4">Content: <span>{{project.content}}</span></div>
+     </div>
+     <h3 style="margin:20px;">Average Score: <span>{{average_score}}</span></h3>
+     <a href="" class="btn btn-success btn-rounded btn-block" data-toggle="modal"
+     data-target="#{{project.id}}">Vote</a>
+   </div>
+</div>
+</div>
+
+       <!-- Modal -->
+       <div class="modal fade bd-example-modal-md" id="{{project.id}}" tabindex="-1" role="dialog" aria-labelledby="projectTitle" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 class="modal-title text-center" id="projectTitle">Rate </h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>
+             <div class="modal-body">
+                    {{form.media}}
+               <form class="{% url 'project' project.id %}" action="" method="post" enctype="multipart/form-data">
+                {%csrf_token%}
+
+                {% bootstrap_form vote_form%}
+                 <div class="form-group">
+                   <input type="submit" class="btn mx-auto" value="Submit Vote">
+                 </div>
+               </form>
+             </div>
+           </div>
+         </div>
+       </div>
+   </div>
+ </div>
+</div>
+{% endblock %}
