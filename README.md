@@ -43,11 +43,7 @@ To get the project .......
   
 ##### Cloning the repository:  
  
-```
-##### Navigate into the folder and install requirements  
- ```bash 
-cd project-awwards pip install -r requirements.txt 
-```
+ 
 ##### Install and activate Virtual  
  ```bash 
 - python3 -m venv virtual - source virtual/bin/activate  
