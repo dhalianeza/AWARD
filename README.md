@@ -2,12 +2,7 @@
  an application that will allow a user to post a project he/she has created and get it reviewed by his/her peers
 
 ## Author
-* names : Munezero Tesire Gisele
-* github: amtesire
-* Email: tesiregisele@gmail.com
-
->[amtesire](https://github.com/amtesire) 
-
+ 
 ## Description of user 
 As a user of the application I should be able to:
 * View posted projects and their details
@@ -18,7 +13,7 @@ As a user of the application I should be able to:
 * View my profile page
 
 ##  Live Link  
- Click [View Site](https://tesiawards.herokuapp.com/)  to visit the site
+ Click [View Site]()  to visit the site
 
 ## Screenshots 
 ###### Home page
@@ -99,11 +94,11 @@ Open the application on your browser `127.0.0.1:8000`.
 * There are no known bugs currently but pull requests are allowed incase you spot a bug  
   
 ## Contact Information   
-If you have any question or contributions, please email me at [tesiregisele@gmail.com]  
+If you have any question or contributions, please email me at [daliaprecious4@gmail.com]  
   
 ## License 
 MIT License
 
 Licensed under MIT License
   
-* Copyright (c) 2020 **Tesire Gisele**
+* Copyright (c) 2020 **daliaprecious**
