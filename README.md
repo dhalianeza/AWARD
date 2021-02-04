@@ -18,7 +18,7 @@ As a user of the application I should be able to:
 ## Screenshots 
 ###### Home page
  
-<img src="https://raw.githubusercontent.com/amtesire/Project-Awards/master/media/images/homepage.png">
+ 
 
 ###### Home page
  
