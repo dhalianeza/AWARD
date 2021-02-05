@@ -41,9 +41,6 @@
 
 ## Setup and Installation  
 To get the project .......  
-  
-##### Cloning the repository:  
- 
  
 ##### Install and activate Virtual  
  ```bash 
