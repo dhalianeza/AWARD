@@ -14,22 +14,7 @@
 * View my profile page
 
 ##  Live Link  
- Click [View Site]()  to visit the site
-
-## Screenshots 
-###### Home page
- 
- 
-
-###### Home page
- 
- 
- 
- ###### Rating of a post
-  
- ###### Profile Page
-  
-
+ Click [Golive](https://preciousaward.herokuapp.com/)  to visit the site
 
 ## Prerequisites && Installations
 * Create and Activate a virtual environment.
