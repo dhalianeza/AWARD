@@ -1,8 +1,8 @@
 # Project-Awards
- an application that will allow a user to post a project he/she has created and get it reviewed by his/her peers
  this app  called precious  awards wand will allow thr user to post they're project with picture and the live link but before using it the user must create account or sign in
 
 ## Author
+ * Dalia Nyiraneza
  
 ## Description of user 
 As a user of the application I should be able to:
