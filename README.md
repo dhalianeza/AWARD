@@ -5,7 +5,7 @@
  * Dalia Nyiraneza
  
 ## Description of user 
-
+* user must have account
 * View posted projects and their details
 * Post a project to be rated/reviewed
 * Rate/ review other users' projects
