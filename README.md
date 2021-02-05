@@ -5,7 +5,7 @@
  * Dalia Nyiraneza
  
 ## Description of user 
-As a user of the application I should be able to:
+
 * View posted projects and their details
 * Post a project to be rated/reviewed
 * Rate/ review other users' projects
