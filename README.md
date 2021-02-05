@@ -89,8 +89,5 @@ Open the application on your browser `127.0.0.1:8000`.
 If you have any question or contributions, please email me at [daliaprecious4@gmail.com]  
   
 ## License 
-MIT License
-
-Licensed under MIT License
   
 * Copyright (c) 2020 **daliaprecious**
